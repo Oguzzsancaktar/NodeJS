@@ -4,6 +4,9 @@ const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task');
 
 
+const app = express()
+const port = process.env.PORT || 3000
+
 const app = express();
 app.use(express.json());
 app.use(userRouter)
@@ -24,7 +27,7 @@ const port = process.env.PORT || 3000;
 // }
 // main()
 
+
 app.listen(port, () => {
-  console.log('App running on port' + port);
-  console.log('http://localhost:' + port);
-});
+    console.log('Server is up on port ' + port)
+})
